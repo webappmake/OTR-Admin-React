@@ -8,6 +8,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import ListSubheader from '@mui/material/ListSubheader';
+// import { Link as RouterLink } from "react-router-dom";
 
 const drawerWidth = 256;
 
@@ -26,7 +27,7 @@ export default function ClippedDrawer() {
           <List>
             {['Home', 'Process Status', 'App Version Code', 'Publishing'].map((text, index) => (
               <ListItem key={text} disablePadding>
-                <ListItemButton>
+                <ListItemButton href={text}>
                   <ListItemText primary={text} />
                 </ListItemButton>
               </ListItem>
@@ -36,7 +37,7 @@ export default function ClippedDrawer() {
           <List subheader={<ListSubheader color="primary">Admin Menu</ListSubheader>}>
             {['User Management', 'Preset Management', 'Web Simulation'].map((text, index) => (
               <ListItem key={text} disablePadding>
-                <ListItemButton>
+                <ListItemButton href={text}>
                   <ListItemText primary={text} />
                 </ListItemButton>
               </ListItem>
