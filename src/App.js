@@ -36,8 +36,8 @@ const theme = createTheme({
     },
     search: {
       light: '#0194D6', //'#818B3E', //'#694DE8',
-      main: '#0194D6', //'#818B3E', //'#8367FF',
-      darker: '#0194D6', //'#666633', //'#694DE8' 
+      main: '#004C7A', //'#818B3E', //'#8367FF',
+      darker: '#004C7A', //'#666633', //'#694DE8' 
       contrastText: '#ffffff',
     }
   },  
