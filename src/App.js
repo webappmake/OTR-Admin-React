@@ -25,15 +25,15 @@ const theme = createTheme({
       contrastText: '#ffffff',
     },
     secondary: {
-      light: '#32A3BE', //'#90A245', //'#7879F1',
-      main: '#32A3BE', //'#90A245', //'#7879F1', 
-      darker: '#32A3BE', //'#90A245', //'#7879F1', 
+      light: '#0078ba', //'#90A245', //'#7879F1',
+      main: '#0078ba', //'#90A245', //'#7879F1', 
+      darker: '#0078ba', //'#90A245', //'#7879F1', 
       contrastText: '#ffffff',
     },
     success: {
-      main: '#0f98cd', //'#666633', //'#4A45BD',
+      main: '#004487', //'#666633', //'#4A45BD',
       contrastText: '#ffffff',
-    }, 
+    },
     search: {
       light: '#0194D6', //'#818B3E', //'#694DE8',
       main: '#0194D6', //'#818B3E', //'#8367FF',
