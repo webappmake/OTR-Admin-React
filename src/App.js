@@ -25,9 +25,9 @@ const theme = createTheme({
       contrastText: '#ffffff',
     },
     secondary: {
-      light: '#0F9BB2', //'#90A245', //'#7879F1',
-      main: '#0F9BB2', //'#90A245', //'#7879F1', 
-      darker: '#0F9BB2', //'#90A245', //'#7879F1', 
+      light: '#0082BC', //'#90A245', //'#7879F1',
+      main: '#0082BC', //'#90A245', //'#7879F1', 
+      darker: '#0082BC', //'#90A245', //'#7879F1', 
       contrastText: '#ffffff',
     },
     success: {
@@ -35,9 +35,9 @@ const theme = createTheme({
       contrastText: '#ffffff',
     },
     search: {
-      light: '#00708e', //'#818B3E', //'#694DE8',
-      main: '#00708e', //'#818B3E', //'#8367FF',
-      darker: '#0878C4', //'#666633', //'#694DE8' 
+      light: '#0194D6', //'#818B3E', //'#694DE8',
+      main: '#0194D6', //'#818B3E', //'#8367FF',
+      darker: '#0194D6', //'#666633', //'#694DE8' 
       contrastText: '#ffffff',
     }
   },  
