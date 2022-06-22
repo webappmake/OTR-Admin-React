@@ -19,9 +19,9 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      light: '#0A6787', //'#90A245', //'#7879F1', 
-      main: '#0A6787', //'#818B3E', //'#5D5FEF',
-      darker: '#0A6787', //'#666633', //'#4A45BD', 
+      light: '#006699', //'#90A245', //'#7879F1', 
+      main: '#006699', //'#818B3E', //'#5D5FEF',
+      darker: '#006699', //'#666633', //'#4A45BD', 
       contrastText: '#ffffff',
     },
     secondary: {
@@ -31,7 +31,7 @@ const theme = createTheme({
       contrastText: '#ffffff',
     },
     success: {
-      main: '#32A3BE', //'#666633', //'#4A45BD',
+      main: '#0f98cd', //'#666633', //'#4A45BD',
       contrastText: '#ffffff',
     }, 
     search: {
