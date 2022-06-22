@@ -19,9 +19,9 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      light: '#32A3BE', //'#90A245', //'#7879F1', 
-      main: '#32A3BE', //'#818B3E', //'#5D5FEF',
-      darker: '#32A3BE', //'#666633', //'#4A45BD', 
+      light: '#0A6787', //'#90A245', //'#7879F1', 
+      main: '#0A6787', //'#818B3E', //'#5D5FEF',
+      darker: '#0A6787', //'#666633', //'#4A45BD', 
       contrastText: '#ffffff',
     },
     secondary: {
@@ -35,9 +35,9 @@ const theme = createTheme({
       contrastText: '#ffffff',
     }, 
     search: {
-      light: '#32A3BE', //'#818B3E', //'#694DE8',
-      main: '#32A3BE', //'#818B3E', //'#8367FF',
-      darker: '#32A3BE', //'#666633', //'#694DE8' 
+      light: '#0194D6', //'#818B3E', //'#694DE8',
+      main: '#0194D6', //'#818B3E', //'#8367FF',
+      darker: '#0194D6', //'#666633', //'#694DE8' 
       contrastText: '#ffffff',
     }
   },  
