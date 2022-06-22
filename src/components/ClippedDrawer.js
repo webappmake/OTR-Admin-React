@@ -26,7 +26,7 @@ export default function ClippedDrawer() {
           <List>
             {['Home', 'Process Status', 'App Version Code', 'Publishing'].map((text, index) => (
               <ListItem key={text} disablePadding>
-                <ListItemButton href={text}>
+                <ListItemButton href={text} selected={index == 2}>
                   <ListItemText primary={text} />
                 </ListItemButton>
               </ListItem>

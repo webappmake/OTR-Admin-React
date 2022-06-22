@@ -19,23 +19,25 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      light: '#90A245', //'#7879F1', 
-      main: '#818B3E', //'#5D5FEF',
-      darker: '#666633', //'#4A45BD', 
+      light: '#32A3BE', //'#90A245', //'#7879F1', 
+      main: '#32A3BE', //'#818B3E', //'#5D5FEF',
+      darker: '#32A3BE', //'#666633', //'#4A45BD', 
+      contrastText: '#ffffff',
     },
     secondary: {
-      light: '#90A245', //'#7879F1',
-      main: '#90A245', //'#7879F1', 
-      darker: '#90A245', //'#7879F1', 
+      light: '#32A3BE', //'#90A245', //'#7879F1',
+      main: '#32A3BE', //'#90A245', //'#7879F1', 
+      darker: '#32A3BE', //'#90A245', //'#7879F1', 
       contrastText: '#ffffff',
     },
     success: {
-      main: '#666633', //'#4A45BD',
+      main: '#32A3BE', //'#666633', //'#4A45BD',
+      contrastText: '#ffffff',
     }, 
     search: {
-      light: '#818B3E', //'#694DE8',
-      main: '#818B3E', //'#8367FF',
-      darker: '#666633', //'#694DE8' 
+      light: '#32A3BE', //'#818B3E', //'#694DE8',
+      main: '#32A3BE', //'#818B3E', //'#8367FF',
+      darker: '#32A3BE', //'#666633', //'#694DE8' 
       contrastText: '#ffffff',
     }
   },  
