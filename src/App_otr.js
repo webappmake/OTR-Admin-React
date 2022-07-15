@@ -1,10 +1,17 @@
 import React from "react";
 import './assets/scss/otr.scss';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import ClippedDrawer from './components/ClippedDrawer';
 import Box from '@mui/material/Box';
-import IntellyticsHeader from "./components/IntellyticsHeader";
-import IntellyticsContainer from "./components/IntellyticsContainer";
-import IntellyticsFooter from "./components/IntellyticsFooter";
+import Breadcrumbs from "./components/Breadcrumbs";
+import Contents from "./components/Contents";
+
 
 const theme = createTheme({
   status: {
@@ -12,19 +19,25 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: '#333333', //#5D5FEF',
+      light: '#7879F1', //'#006699', //'#90A245',
+      main: '#5D5FEF', //'#069CB3', //'#006699', //'#818B3E',
+      darker: '#4A45BD', //'#006699', //'#666633',
       contrastText: '#ffffff',
     },
     secondary: {
-      main: '#ffe228',
+      light: '#7879F1', //'#0082BC', //'#90A245',
+      main: '#7879F1', //'#2EA4BF',// '#0082BC', //'#90A245',
+      darker: '#7879F1', //'#0082BC', //'#90A245',
       contrastText: '#ffffff',
     },
-    accepted: {
-      main: '#4d4ddb',
+    success: {
+      main: '#4A45BD', //'#00708F', //'#666633',
       contrastText: '#ffffff',
     },
-    test: {
-      main: '#f16c35',
+    search: {
+      light: '#694DE8', //'#0194D6', //'#818B3E',
+      main: '#8367FF', //'#00708F', //'#818B3E',
+      darker: '#694DE8', //'#0194D6', //'#666633',
       contrastText: '#ffffff',
     }
   },  
@@ -32,13 +45,8 @@ const theme = createTheme({
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <Box className='wrapper'>
-        <IntellyticsHeader/>
-        <IntellyticsContainer/>
-        <IntellyticsFooter/>
-      </Box>
-      {/* <Box sx={{ display: 'flex' }}>
+    <ThemeProvider theme={theme} className="App">
+      <Box sx={{ display: 'flex' }}>
         <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
           <Toolbar>
             <IconButton
@@ -63,7 +71,7 @@ function App() {
           <Breadcrumbs/>
           <Contents/>
         </Box>
-      </Box> */}
+      </Box>
     </ThemeProvider>
   );
 }

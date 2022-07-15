@@ -1,44 +1,22 @@
 /* ------------------------------------------------------- FONT ------------------------------------------------------- */
 $base_font_family:  "Roboto", "Noto Sans KR", sans-serif !important;
 /* ------------------------------------------------------- COLOR ------------------------------------------------------- */
-$primary: #5D5FEF;
+$primary: #ffe228;
 $primary-light: #7879F1;
 $primary-dark: #4A45BD;
 $bg_actived_dark: #A5A5E3;
 $bg_blank_area: rgba(224, 224, 246, 0.4);
-
-$primary: #818B3E;
-$primary-light: #90A245;
-$primary-dark: #666633;
-$bg_actived_dark: rgba(120, 118, 54, .5);
-$bg_blank_area: rgba(188, 173, 108, .05);
-
-$primary: #006699;
-$primary-light: #0082BC;
-$primary-dark: #004C7A;
-$bg_actived_dark: rgba(0, 102, 153, .5);
-$bg_blank_area: rgba(0, 102, 153, .05);
-
-$primary: #069CB3;
-$primary-light: #2EA4BF;
-$primary-dark: #004C7A;
-$bg_actived_dark: rgba(6, 156, 179,.5);
-$bg_blank_area: rgba(6, 156, 179, .05);
-// $color_secondary: #a4abc5;
-// $color_secondary_dark: #898fa7;
-// $color_submit: #3e76ed;
 $border: #e3ebf6;
-// $border_dark: #d4d4d4;
-// $gray: #888;
-// $darkgray: #353f4d;
-// /* ------------------------------------------------------- LAYOUT ------------------------------------------------------- */
-$appbar-height: 64px;
-$breadcrumb-height: 62px;
-// $lnb_width: 13.5417vw;
-// $gutter_xs : 0.1563vw ;
-// $gutter_sm : 0.3125vw ;
-// $gutter_md: 0.6250vw ;
-// $gutter_lg : 1.2500vw ;
-// $gutter_xl : 1.8750vw ;
-// $radius: 0.2083vw;
-// $radius_sm: 0.1563vw;
+
+/* ------------------------------------------------------- LAYOUT ------------------------------------------------------- */
+$header-height: 200px;
+$layout-gutter-left: 120px;
+
+$gutter-xs: 6px; 
+$gutter-sm: 12px; 
+$gutter-md: 24px; 
+$gutter-lg: 30px; 
+$gutter-xl : 40px;
+
+$radius-sm: 4px;
+$radius-md: 12px;
