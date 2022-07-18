@@ -17,6 +17,10 @@ const theme = createTheme({
     },
     secondary: {
       main: '#ffe228',
+      contrastText: '#333333',
+    },
+    secondaryDark: {
+      main: '#f9b200',
       contrastText: '#ffffff',
     },
     accepted: {
@@ -26,7 +30,10 @@ const theme = createTheme({
     test: {
       main: '#f16c35',
       contrastText: '#ffffff',
-    }
+    },
+    gray: {
+      main: '#f1f2f2',
+    },
   },  
 });
 
@@ -38,32 +45,6 @@ function App() {
         <IntellyticsContainer/>
         <IntellyticsFooter/>
       </Box>
-      {/* <Box sx={{ display: 'flex' }}>
-        <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
-          <Toolbar>
-            <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              sx={{ mr: 2 }}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              ThinQ SOTA Admin
-            </Typography>
-            <Button color="inherit">Request as User</Button>
-            <Button color="inherit">Logout</Button>
-          </Toolbar>
-        </AppBar>
-        <ClippedDrawer/>
-        <Box component="main" className="container-fluid">
-          <Toolbar />
-          <Breadcrumbs/>
-          <Contents/>
-        </Box>
-      </Box> */}
     </ThemeProvider>
   );
 }

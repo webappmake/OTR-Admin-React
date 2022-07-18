@@ -9,7 +9,7 @@
 @import '@fontsource/roboto/500.css';
 @import '@fontsource/roboto/700.css';
 
-/* COMMON > LAYOUT */
+/* Common > Layout */
 .wrapper {
   width: 100vw;
   height: 100vh;
@@ -72,9 +72,8 @@
       font-size: 16px;
       line-height: 1.4;  
       margin-bottom: $gutter-lg;
-      span {
-        display: block;
-      }
+      &:hover { text-decoration: underline; }
+      span { display: block; }
     }
     .link-list {
       font-size: 15px;
@@ -82,6 +81,7 @@
       line-height: 1.7;
       letter-spacing: .1rem;
       text-transform: uppercase;
+      a:hover { text-decoration: underline; }
     } 
   }
 }
@@ -131,9 +131,7 @@
       font-size: 17px;
       font-weight: 600;
     }
-    .MuiTabs-indicator {
-      height: 4px;
-    }    
+    .MuiTabs-indicator { height: 4px; }    
   }
   .MuiBox-root { border: none; padding: 0; }
   .intellytics-tab-panel {
@@ -152,105 +150,99 @@
 }
 
 /* Container > Card */
-
-.MuiCardActions-root {
-  padding: 8px 16px  16px !important;
+.card-wrap {
+  // common & Authorized
+  .MuiCard-root {
+    position: relative;
+    
+    .MuiCardContent-root { 
+      .card-tit {
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 28px;
+        margin-bottom: $gutter-sm;
+      }
+      .card-desc { 
+        @include ellipsis(2, 1.6em);
+        font-size: 13px;
+        color: #777;
+        margin-bottom: $gutter-sm;
+      }
+      .chip-wrap {
+        margin: - calc($gutter-xs/2);
+        .MuiChip-sizeSmall {
+          font-size: 11px;
+          line-height: 1;
+          padding: 0 $gutter-xs;
+          margin: calc($gutter-xs/2);
+          &.Mui-disabled { opacity: 0 !important; }
+        }
+      }
+    }    
+  }
+  // Unauthorised
+  &.unauthorized {
+    .MuiCard-root {
+      overflow: visible !important;
+      .MuiFab-root {
+        position: absolute; bottom: -20px; left: calc(50% - 28px);
+      }
+    }  
+  }
+  // Declined
+  &.declined {
+    .MuiCard-root {
+      overflow: visible !important;
+      .MuiFab-root {
+        position: absolute; bottom: -20px; left: calc(50% - 69px);
+        span { line-height: 1; font-size: 12px; }
+      }
+    }  
+  }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//test
-// .list-divider {
-//   border-width: 1px; 
-//   border-color: $primary-light;
-//   margin: 0 !important;
-// }
-// .breadcrumb {
-//   @include flex;
-//   min-width: 850px;
-//   align-items: baseline;
-//   justify-content: space-between;
-//   padding-bottom: 7px;
-//   margin: 24px 24px 0;
-//   border-bottom: 1px solid $border;
-// }
-// .container-fluid {
-//   width: 100%; 
-//   height: 100vh;
-//   .contents {
-//     height: calc(100vh - #{$appbar-height} - #{$breadcrumb-height});
-//     .vertical-scroll-area {
-//       padding: 0 24px 24px;
-//     }
-//   }
-// }
-// .section-title {
-//   @include flex;
-//   justify-content: space-between;
-//   align-items: baseline;
-//   .title {
-//     font-weight: 500;
-//     font-size: 24px;
-//     line-height: 32px;
-//     color: #555;
-//     padding: 32px 0 16px;
-//   }
-// }
-// .section-content {
-//   .table-area {
-//     @include flex;
-//     justify-content: center;
-//     align-items: center;
-//     width: 100%; 
-//     height: 470px;
-//     background: $bg_blank_area;
-//     & > span { 
-//       font-size: 24px;
-//       line-height: 32px;
-//       color: $bg_actived_dark;
-//     }
-//   }
-// }
-// .icon-only {
-//   min-width: 36px !important;
-//   font-size: 0 !important;
-//   text-indent: -999px; 
-//   min-height: 31px; 
-//   * { margin: 0 !important; }
-// }
-// .textfield-wrap {
-//   @include flex; 
-//   align-items: baseline; 
-//   margin: 0 -3px;
-//   & > .MuiFormControl-root { flex-grow: 1; }
-//   button { flex-shrink: 0; margin: 0 3px; }
-//   .hyphen { padding: 0 12px; }
-// }
-// .btn-search-wrap {
-//   @include flex;
-//   justify-content: center;
-//   align-items: center;
-//   padding: 24px;
-//   .btn-search {
-//     width: 180px !important;
-//   }
-// }
-// @media (min-width: 1920px) {
-// }
+/* Dialog */
+.intellytics-dialog {  
+  .MuiDialogTitle-root {
+    & > span { display: inline-block; vertical-align: middle; }
+    .MuiChip-sizeSmall {
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1;
+      margin-left: $gutter-xs;
+    } 
+  }
+  .MuiDialogContent-root {    
+    .MuiDialogContentText-root {
+      color: #555;
+      font-size: 13px;
+      line-height: 1.6;
+      letter-spacing: -.01rem;      
+      margin: $gutter-sm 0;
+      em {                 
+        display: block;
+        font-style: normal;
+        font-size: 14px;
+        font-weight: 600;
+      } 
+      & > .text-mark {
+        display: block;
+        color: #cc0000;        
+        font-weight: 600;
+        margin: $gutter-sm 0;        
+      }        
+    }
+    .MuiInput-input { font-size: 13px; }
+    .MuiFormControlLabel-label { 
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: -.01rem;  
+      color: #555;
+    }     
+  }
+  .MuiDialogActions-root {
+    padding: 0 $gutter-md $gutter-md;
+    Button { flex-grow: 1; }
+  }
+}

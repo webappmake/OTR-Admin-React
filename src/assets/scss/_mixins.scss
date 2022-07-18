@@ -60,6 +60,17 @@ flex-direction: row;
     clear: both;
   }
 }
+@mixin ellipsis($line-cnt, $line-height) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $line-cnt;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word; 
+  line-height: $line-height;
+  height: $line-height * $line-cnt;
+}
+
 //------------------------------------------------------------사용한것은 위에 아닌것은 아래에------------------------------------------------------------//
 
 
