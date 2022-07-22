@@ -1,5 +1,5 @@
 import React from "react";
-import './assets/scss/otr.scss';
+import './assets/scss/portal.scss';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import IntellyticsHeader from "./components/IntellyticsHeader";

@@ -11,18 +11,7 @@ export default function Authorized() {
     return (
         <div className='contents'>
             <PerfectScrollbar className='vertical-scroll-area'>
-                <Box
-                    className='card-wrap'
-                    sx={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        '& > :not(style)': {
-                        m: 2,
-                        width: 345,
-                        height: 150
-                        },
-                    }}
-                >
+                <Box className='card-wrap'>
                     <Card>
                         <CardActionArea>                            
                             <CardContent>
@@ -38,7 +27,7 @@ export default function Authorized() {
                         <CardActionArea>
                             <CardContent>
                                 <h3 className='card-tit'>H&amp;A 데이터 대시보드</h3>
-                                <p className='card-desc'>H&amp;A 사업본부의 제품 및 서비스 지표를 확인할 수 있습니다.  소속을 명확히 기입해 주세요.</p>
+                                <p className='card-desc'>H&amp;A 사업본부의 제품 및 서비스 지표를 확인할 수 있습니다. 소속을 명확히 기입해 주세요.</p>
                                 <div className='chip-wrap'>
                                     <Chip label="Accepted" size="small" color="accepted"/>
                                 </div>

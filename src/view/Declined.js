@@ -13,18 +13,7 @@ export default function Declined() {
     return (
         <div className='contents'>
             <PerfectScrollbar className='vertical-scroll-area'>
-                <Box
-                    className='card-wrap declined'
-                    sx={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        '& > :not(style)': {
-                        m: 2,
-                        width: 345,
-                        height: 150
-                        },
-                    }}
-                >             
+                <Box className='card-wrap declined'>             
                     <Card>
                         <CardContent>
                             <h3 className='card-tit'>ThinQ &amp; Amazon DRS</h3>
@@ -38,7 +27,7 @@ export default function Declined() {
                     <Card>
                         <CardContent>
                             <h3 className='card-tit'>ThinQ Home</h3>
-                            <p className='card-desc'> BS 사업부의 B2B HomeIoT 서비스 Dashboard입니다.</p>
+                            <p className='card-desc'> BS 사업부의 B2B HomeIoT 서비스 대시보드입니다.</p>
                             <div className='chip-wrap'>
                                 <Chip label="Test" size="small" color="test"/>
                             </div>
