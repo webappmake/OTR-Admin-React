@@ -1,0 +1,297 @@
+@charset "utf-8";
+
+@import "CloudDevelopersDayVar", "reset", "mixins";
+@import url("http://fonts.googleapis.com/earlyaccess/notosanskr.css");
+@import '@fontsource/roboto/300.css';
+@import '@fontsource/roboto/400.css';
+@import '@fontsource/roboto/500.css';
+@import '@fontsource/roboto/700.css';
+
+/* Common > Layout */
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffe228;
+  position: relative;
+  padding: $gutter-xl;
+  z-index: 999;
+  .cloud-developers-day-header {
+    @include flex;
+    width: 100%;    
+    height: $header-height; 
+    justify-content: space-between;    
+  }
+  .cloud-developers-day-container {
+    width: 100vw;
+    height: calc(100vh - #{$header-height});
+    margin-left: -$gutter-xl;
+    padding: 0 210px 0 0;
+    z-index: 997;
+    .contents {
+      position: relative;
+      height: calc(100vh - #{$header-height} - #{$gutter-xl});
+      background-color: #fff;  
+      .vertical-scroll-area {
+      }
+    }
+  }
+}
+
+/* Header */
+.cloud-developers-day-header {
+  & > h1 {
+    img {
+      width: 420px;
+      height: auto;
+    }
+  }
+  .event-details {
+    @include flex;
+    dt {
+      font-size: 23px;
+      font-weight: 600;
+      letter-spacing: .1rem;
+      margin-right: $gutter-sm;
+    }
+    dd {
+      font-size: 20px;
+      font-weight: 300;
+      em {
+        font-size: 23px;
+        font-weight: 400;
+        font-style: normal;
+        margin-right: $gutter-xs;
+      }
+      em, span { vertical-align: middle; }
+    }
+  }
+  .nav {
+    @include flex;
+    flex-direction: column;
+    align-items: end; 
+    .user-info {
+      text-align: right;
+      &:hover { text-decoration: underline; }
+      &::after {
+        content: '';
+        width: 54px;
+        height: 5px;
+        background-color: #333;
+        display: inline-block;
+      }
+      span { 
+        display: block; 
+        font-size: 16px;
+        &.name {
+          font-size: 18px;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .MuiFormControlLabel-root {
+      margin-right: 0; 
+      .MuiTypography-root { font-weight: bold; }
+    }
+    .MuiFab-root {
+      display: block;
+    }
+  }
+}
+
+/* Footer */
+.cloud-developers-day-footer {
+  .footer-logo {
+    position: absolute; bottom: $gutter-xl; left: $gutter-xl;
+    img { 
+      width: auto;
+      height: 34px;
+    }
+  }
+  .footer-info {
+    position: absolute; bottom: $gutter-xl; right: $gutter-xl; 
+    .contact {   
+      color: #444;
+      line-height: 2; 
+      text-align: right;
+      em { 
+        display: block;
+        font-style: normal;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: .05rem;
+      }
+      span {
+        display: block;
+        font-size: 13px;
+        font-weight: 400; 
+      }
+    }
+  }
+  & > .copy {
+    position: fixed;
+    top: 480px;
+    left: -75px;    
+    transform: rotate(-90deg);
+    font-size: 10px;
+    color: #999;
+  }
+}
+
+/* Container */
+.cloud-developers-day-container {
+  .article {
+    width: 100%;
+    background-color: #fff;
+    padding: $gutter-xxl $gutter-xxl $gutter-xxl $layout-gutter-left;
+    &.bg-lightgray {
+      background-color: #f9fafb;
+    }
+    & > h3 {
+      font-size: 32px;
+      font-weight: 600;
+      color: #191f28;
+      letter-spacing: .1rem;
+      margin-bottom: $gutter-md;
+      .text-red { color: #a50034; }
+    }
+    & > p {
+      font-size: 17px;
+      font-weight: 300;
+      color: #4e5968;
+      line-height: 1.8;
+      &.text-helper {
+        font-size: 16px;
+        font-weight: 500;
+        color: #a50034;
+        margin-bottom: $gutter-lg;
+      }
+    }    
+    .list {
+      & > li {
+        font-size: 17px;
+        font-weight: 400;
+        color: #4e5968;
+        line-height: 2.2;
+        &::before {
+          content: '';
+          width: 6px;
+          height: 6px; 
+          display: inline-block;
+          border-radius: 50%;
+          background-color: #4e5968;
+          margin-right: $gutter-sm;
+          margin-bottom: 3px;
+        }
+      }
+    }
+  }
+}
+.program-timetable {
+  width: 100%;
+  table-layout: fixed;
+  background: #fff;
+  thead { border-bottom: 2px solid #04314d; }
+  tbody tr { border-bottom: 1px solid #04314d; }
+  th, td {
+    padding: $gutter-sm;
+    line-height: 1.8;
+    text-align: center;
+    vertical-align: middle;
+  }
+  th {     
+    font-size: 20px;   
+    font-weight: 600;
+    color: #04314d;
+    letter-spacing: .2rem;      
+  }
+  td {    
+    font-size: 18px;
+    font-weight: 400;    
+    word-break: break-all;
+    border-right: 1px dotted rgba(4, 49, 78, .5);
+    &:last-of-type { border-right: none; }
+    & > em {
+      font-style: normal;
+      font-weight: 600;
+    }
+    & >  span {
+      color: rgba(112, 112, 127, .8);
+      font-weight: 500;
+      &::before {
+        content: '';
+        width: 2px;
+        height: 18px;
+        display: inline-block;
+        background-color: rgba(112, 112, 127, .5);
+        margin: 0 $gutter-sm;
+        margin-bottom: -3px;
+      }
+    }
+  }
+  .track-title {
+    .track {
+      font-size: 18px;
+      font-weight: 500;
+      color: #fff;
+      &.bg-blue { background-color: #4d4ddb; }
+      &.bg-gray { background-color: #7c7c7c; }
+      &.bg-orange { background-color: #f16c35; }
+    }
+  }
+  .track {
+    &.bg-blue { background-color: rgba(77, 77, 219, .2); }
+    &.bg-gray { background-color: rgba(124, 124, 124, .2); }
+    &.bg-orange { background-color: rgba(241, 108, 53, .2); }
+  }
+  
+}
+
+
+
+
+/* Dialog */
+.intellytics-dialog {  
+  .MuiDialogTitle-root {
+    & > span { display: inline-block; vertical-align: middle; }
+    .MuiChip-sizeSmall {
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1;
+      margin-left: $gutter-xs;
+    } 
+  }
+  .MuiDialogContent-root {    
+    .MuiDialogContentText-root {
+      color: #555;
+      font-size: 13px;
+      line-height: 1.6;
+      letter-spacing: -.01rem;      
+      margin: $gutter-sm 0;
+      em {                 
+        display: block;
+        font-style: normal;
+        font-size: 14px;
+        font-weight: 600;
+      } 
+      & > .text-mark {
+        display: block;
+        color: #cc0000;        
+        font-weight: 600;
+        margin: $gutter-sm 0;        
+      }        
+    }
+    .MuiInput-input { font-size: 13px; }
+    .MuiFormControlLabel-label { 
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: -.01rem;  
+      color: #555;
+    }     
+  }
+  .MuiDialogActions-root {
+    padding: 0 $gutter-md $gutter-md;
+    Button { flex-grow: 1; }
+  }
+}

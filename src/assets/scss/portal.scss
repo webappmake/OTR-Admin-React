@@ -196,7 +196,6 @@
   &.unauthorized {
     .MuiCard-root {
       overflow: visible !important;
-      z-index: 9;
       .MuiFab-root {
         position: absolute; bottom: -20px; left: calc(50% - 28px);
         .MuiSvgIcon-root { 
@@ -210,7 +209,6 @@
   &.declined {
     .MuiCard-root {     
       overflow: visible !important;
-      z-index: 9;
       .MuiFab-root { 
         position: absolute; bottom: -20px; left: calc(50% - 69px);
         span { line-height: 1; font-size: 12px; }
@@ -455,7 +453,6 @@
   &.unauthorized {
     .MuiCard-root {
       overflow: visible !important;
-      z-index: 9;
       .MuiFab-root {
         position: absolute; bottom: -1.0417vw; left: calc(50% - 1.4583vw);
         width: 2.9167vw; //mui
@@ -471,7 +468,6 @@
   // Declined
   &.declined {
     overflow: visible !important;
-    z-index: 9;
     .MuiCard-root {     
       .MuiFab-root { 
         position: absolute; bottom: -1.0417vw; left: calc(50% - 3.5938vw);
