@@ -10,7 +10,7 @@
 /* Common > Layout */
 #root {
   width: 100vw;
-	height: 100%;
+  height: 100vh;
   background-color: $primary;
   position: relative;
   overflow: hidden;
@@ -24,14 +24,14 @@
   }
   .cloud-developers-day-container {
     width: 100vw;
-    height: calc(var(--vh, 1vh) * 100 - #{$header-height});
+    height: calc(100vh - #{$header-height});
     margin-left: -$gutter-xl;
     padding: 0 210px 0 0;
     overflow: hidden;
     z-index: 997;
     .contents {
       position: relative;
-      height: calc(var(--vh, 1vh) * 100 - #{$header-height} - #{$gutter-xl});
+      height: calc(100vh - #{$header-height} - #{$gutter-xl});
       background-color: $color-white;
     }
   }
