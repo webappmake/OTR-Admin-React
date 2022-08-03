@@ -33,7 +33,7 @@
       position: relative;
       height: calc(100vh - #{$header-height} - #{$gutter-xl});
       height: calc(var(--vh, 1vh) * 100 - #{$header-height} - #{$gutter-xl});
-      background-color: $color-white;
+      background-color: $color-white; 
     }
   }
 }
