@@ -1,5 +1,5 @@
 
-html,body{ width: 100%; }
+html { width: 100vw; height: calc(var(--vh, 1vh) * 100); }
 body,div,h1,h2,h3,h4,h5,h6,ol,ul,li,dl,dt,dd,a,img,p,span,
 form,fieldset,legend,label,input,select,button,
 table,caption,colgroup,col,thead,tbody,tr,th,td,address,tfoot,
