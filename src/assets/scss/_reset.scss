@@ -7,8 +7,7 @@ header,nav,footer,section,article,mark,figure,figcaption,time,aside,small,blockq
 html,header,nav,footer,section,article,figure,figcaption,aside,small { display: block; }
 body {
 	width: 100%;
-	height: 100vh;
-	height: calc(var(--vh, 1vh) * 100);
+	height: 100%;
 	position: relative;
 	overflow: hidden;
 	background-color: #fff;
