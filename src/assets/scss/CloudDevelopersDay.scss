@@ -11,7 +11,6 @@
 .wrapper {
   width: 100vw;
   height: 100vh;
-  height: 100vh;
 	height: calc(var(--vh, 1vh) * 100);
   background-color: $primary;
   position: relative;
@@ -26,7 +25,6 @@
   }
   .cloud-developers-day-container {
     width: 100vw;
-    height: calc(100vh - #{$header-height});
     height: calc(var(--vh, 1vh) * 100 - #{$header-height});
     margin-left: -$gutter-xl;
     padding: 0 210px 0 0;
@@ -34,7 +32,6 @@
     z-index: 997;
     .contents {
       position: relative;
-      height: calc(100vh - #{$header-height} - #{$gutter-xl});
       height: calc(var(--vh, 1vh) * 100 - #{$header-height} - #{$gutter-xl});
       background-color: $color-white;
     }

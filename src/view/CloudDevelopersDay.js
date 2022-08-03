@@ -26,15 +26,14 @@ const theme = createTheme({
   },  
 });
 
-
 function CloudDevelopersDay() {
 
   useEffect(() => {
     let vh = 0;
     vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty("--vh", '${vh}px');
-  }, [window.innerHeight] );
-  
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+  }, [window.innerHeight]);
+
   return (
     <ThemeProvider theme={theme}>
       <Box className='wrapper'>
