@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import '../assets/scss/CloudDevelopersDay.scss';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Box from '@mui/material/Box';
 import CloudDevelopersDayHeader from "../components/CloudDevelopersDayHeader";
 import CloudDevelopersDayContainer from "../components/CloudDevelopersDayContainer";
 import CloudDevelopersDayFooter from "../components/CloudDevelopersDayFooter";
@@ -36,11 +35,9 @@ function CloudDevelopersDay() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box className='wrapper'>
         <CloudDevelopersDayHeader/>
         <CloudDevelopersDayContainer/>
-        <CloudDevelopersDayFooter/>        
-      </Box>
+        <CloudDevelopersDayFooter/> 
     </ThemeProvider>
   );
 }
