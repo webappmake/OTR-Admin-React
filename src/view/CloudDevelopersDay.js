@@ -12,7 +12,7 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: '#333333', //#5D5FEF',
+      main: '#191f28',
       contrastText: '#ffffff',
     },
     secondary: {
@@ -20,7 +20,7 @@ const theme = createTheme({
       contrastText: '#333333',
     },
     accepted: {
-      main: '#4d4ddb',
+      main: '#a50034',
       contrastText: '#ffffff',
     }
   },  

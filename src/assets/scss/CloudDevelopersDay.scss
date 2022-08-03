@@ -11,7 +11,7 @@
 .wrapper {
   width: 100vw;
   height: 100vh;
-  background-color: #ffe228;
+  background-color: $primary;
   position: relative;
   padding: $gutter-xl;
   z-index: 999;
@@ -30,9 +30,7 @@
     .contents {
       position: relative;
       height: calc(100vh - #{$header-height} - #{$gutter-xl});
-      background-color: #fff;  
-      .vertical-scroll-area {
-      }
+      background-color: $color-white;
     }
   }
 }
@@ -46,23 +44,35 @@
     }
   }
   .event-details {
-    @include flex;
-    dt {
-      font-size: 23px;
-      font-weight: 600;
-      letter-spacing: .1rem;
-      margin-right: $gutter-sm;
-    }
-    dd {
-      font-size: 20px;
-      font-weight: 300;
-      em {
+    dl {
+      @include flex;
+      dt {
         font-size: 23px;
-        font-weight: 400;
-        font-style: normal;
-        margin-right: $gutter-xs;
+        font-weight: 600;
+        letter-spacing: .1rem;
+        margin-right: $gutter-sm;
       }
-      em, span { vertical-align: middle; }
+      dd {
+        font-size: 20px;
+        font-weight: 300;
+        em {
+          font-size: 23px;
+          font-weight: 400;
+          font-style: normal;
+          margin-right: $gutter-xs;
+        }
+        em, span { vertical-align: middle; }
+      }
+    }
+    .MuiFormControlLabel-root {
+      .MuiTypography-root { font-weight: bold; }
+    }
+    .custom-button {
+      display: block; 
+      border: 3px solid $color-title;
+      border-radius: 30px;
+      font-weight: bold;
+      margin-top: $gutter-xs;
     }
   }
   .nav {
@@ -76,7 +86,7 @@
         content: '';
         width: 54px;
         height: 5px;
-        background-color: #333;
+        background-color: $color-title;
         display: inline-block;
       }
       span { 
@@ -87,14 +97,6 @@
           font-weight: 600;
         }
       }
-    }
-
-    .MuiFormControlLabel-root {
-      margin-right: 0; 
-      .MuiTypography-root { font-weight: bold; }
-    }
-    .MuiFab-root {
-      display: block;
     }
   }
 }
@@ -111,7 +113,7 @@
   .footer-info {
     position: absolute; bottom: $gutter-xl; right: $gutter-xl; 
     .contact {   
-      color: #444;
+      color: $color-title;
       line-height: 2; 
       text-align: right;
       em { 
@@ -134,7 +136,7 @@
     left: -75px;    
     transform: rotate(-90deg);
     font-size: 10px;
-    color: #999;
+    color: $color-gray;
   }
 }
 
@@ -142,28 +144,29 @@
 .cloud-developers-day-container {
   .article {
     width: 100%;
-    background-color: #fff;
+    background-color: $color-white;
     padding: $gutter-xxl $gutter-xxl $gutter-xxl $layout-gutter-left;
     &.bg-lightgray {
-      background-color: #f9fafb;
+      background-color: $color-lightgray;
     }
     & > h3 {
       font-size: 32px;
       font-weight: 600;
-      color: #191f28;
+      color: $color-title;
       letter-spacing: .1rem;
       margin-bottom: $gutter-md;
-      .text-red { color: #a50034; }
+      .text-red { color: $color-lg-electronics; }
+      & + .swiper { margin-top: -$gutter-md; }
     }
     & > p {
       font-size: 17px;
       font-weight: 300;
-      color: #4e5968;
+      color: $color-description;
       line-height: 1.8;
       &.text-helper {
         font-size: 16px;
         font-weight: 500;
-        color: #a50034;
+        color: $color-lg-electronics;
         margin-bottom: $gutter-lg;
       }
     }    
@@ -171,7 +174,7 @@
       & > li {
         font-size: 17px;
         font-weight: 400;
-        color: #4e5968;
+        color: $color-description;
         line-height: 2.2;
         &::before {
           content: '';
@@ -179,7 +182,7 @@
           height: 6px; 
           display: inline-block;
           border-radius: 50%;
-          background-color: #4e5968;
+          background-color: $color-description;
           margin-right: $gutter-sm;
           margin-bottom: 3px;
         }
@@ -190,9 +193,9 @@
 .program-timetable {
   width: 100%;
   table-layout: fixed;
-  background: #fff;
-  thead { border-bottom: 2px solid #04314d; }
-  tbody tr { border-bottom: 1px solid #04314d; }
+  background: $color-white;
+  thead { border-bottom: 2px solid $table-border; }
+  tbody tr { border-bottom: 1px solid $table-border; }
   th, td {
     padding: $gutter-sm;
     line-height: 1.8;
@@ -202,28 +205,28 @@
   th {     
     font-size: 20px;   
     font-weight: 600;
-    color: #04314d;
+    color: $table-border;
     letter-spacing: .2rem;      
   }
   td {    
     font-size: 18px;
     font-weight: 400;    
     word-break: break-all;
-    border-right: 1px dotted rgba(4, 49, 78, .5);
+    border-right: 1px dotted rgba($table-border, .5);
     &:last-of-type { border-right: none; }
     & > em {
       font-style: normal;
       font-weight: 600;
     }
     & >  span {
-      color: rgba(112, 112, 127, .8);
+      color: rgba($table-sub-title, .8); 
       font-weight: 500;
       &::before {
         content: '';
         width: 2px;
         height: 18px;
         display: inline-block;
-        background-color: rgba(112, 112, 127, .5);
+        background-color: rgba($table-sub-title, .5);
         margin: 0 $gutter-sm;
         margin-bottom: -3px;
       }
@@ -233,65 +236,93 @@
     .track {
       font-size: 18px;
       font-weight: 500;
-      color: #fff;
-      &.bg-blue { background-color: #4d4ddb; }
-      &.bg-gray { background-color: #7c7c7c; }
-      &.bg-orange { background-color: #f16c35; }
+      color: $color-white;
+      &.bg-blue { background-color: $track-blue; }
+      &.bg-gray { background-color: $track-gray; }
+      &.bg-orange { background-color: $track-orange; }
     }
   }
   .track {
-    &.bg-blue { background-color: rgba(77, 77, 219, .2); }
-    &.bg-gray { background-color: rgba(124, 124, 124, .2); }
-    &.bg-orange { background-color: rgba(241, 108, 53, .2); }
+    &.bg-blue { background-color: rgba($track-blue, .2); }
+    &.bg-gray { background-color: rgba($track-gray, .2); }
+    &.bg-orange { background-color: rgba($track-orange, .2); }
   }
-  
 }
 
-
-
-
 /* Dialog */
-.intellytics-dialog {  
-  .MuiDialogTitle-root {
-    & > span { display: inline-block; vertical-align: middle; }
-    .MuiChip-sizeSmall {
-      font-size: 12px;
-      font-weight: 600;
-      line-height: 1;
-      margin-left: $gutter-xs;
-    } 
-  }
+.cloud-developers-day-dialog {
   .MuiDialogContent-root {    
     .MuiDialogContentText-root {
-      color: #555;
-      font-size: 13px;
+      color: $color-description;
+      font-size: 14px;
       line-height: 1.6;
       letter-spacing: -.01rem;      
       margin: $gutter-sm 0;
-      em {                 
-        display: block;
-        font-style: normal;
-        font-size: 14px;
-        font-weight: 600;
-      } 
-      & > .text-mark {
-        display: block;
-        color: #cc0000;        
-        font-weight: 600;
-        margin: $gutter-sm 0;        
-      }        
     }
-    .MuiInput-input { font-size: 13px; }
-    .MuiFormControlLabel-label { 
-      font-size: 12px;
-      font-weight: 600;
-      line-height: 1;
-      letter-spacing: -.01rem;  
-      color: #555;
-    }     
   }
   .MuiDialogActions-root {
     padding: 0 $gutter-md $gutter-md;
-    Button { flex-grow: 1; }
+    Button { 
+      flex-grow: 1; 
+      font-weight: bold;
+    }
+  }
+}
+
+/* Swiper */
+.swiper {
+  width: 100%;
+  height: 100%;
+  &.speakers-swiper {
+    .swiper-slide {
+      width: 100%;
+      padding: 0 $gutter-xxl;
+      text-align: center;
+      .track-title {
+        display: inline-block;
+        width: 300px;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 2.8;
+        border-radius: 50px;        
+        margin-bottom: $gutter-md;
+        border-width: 2px;
+        border-style: solid;
+        &.bg-blue { color: $track-blue; border-color: $track-blue; }
+        &.bg-gray { color: $track-gray; border-color: $track-gray; }
+        &.bg-orange { color: $track-orange; border-color: $track-orange; }
+      }
+      .speakers {
+        text-align: left;
+        .profile-wrapper {
+          @include flex;
+          align-items: center;
+          margin: $gutter-md;
+          .photo-speaker {
+            width: 170px;
+            height: auto;
+            border-radius: 50%;
+            margin-right: $gutter-lg;
+          }
+          .profile {     
+            .name {              
+              font-size: 22px;
+              font-weight: 500;
+              color: $color-title;
+              margin-bottom: $gutter-sm;
+              em { font-style: normal; }
+              span { font-weight: 600; }
+              em + span { margin-left: $gutter-sm; }
+            }
+            .desc {
+              @include ellipsis(3, 1.7);
+              font-size: 15px;
+              color: $color-description;
+            }
+          }
+        }
+      }
+    }
+    .swiper-button-prev, .swiper-button-next { color: $color-description; }
   }
 }

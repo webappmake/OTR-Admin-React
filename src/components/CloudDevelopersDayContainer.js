@@ -2,7 +2,9 @@ import * as React from 'react';
 import 'react-perfect-scrollbar/dist/css/styles.css';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import Box from '@mui/material/Box';
-import ProgramTimetable from '../components/ProgramTimetable'
+import ProgramTimetable from './ProgramTimetable'
+import SpeakersSwiper from './SpeakersSwiper';
+
 export default function CloudDevelopersDayContainer() {
 
     return (
@@ -32,6 +34,7 @@ export default function CloudDevelopersDayContainer() {
                     </Box>
                     <Box className='article bg-lightgray'>
                         <h3>발표자</h3>
+                        <SpeakersSwiper/>
                     </Box>
                 </PerfectScrollbar>
             </section>
