@@ -5,7 +5,6 @@ import Box from '@mui/material/Box';
 import IntellyticsHeader from "./components/IntellyticsHeader";
 import IntellyticsContainer from "./components/IntellyticsContainer";
 import IntellyticsFooter from "./components/IntellyticsFooter";
-import CloudDevelopersDay from "./view/CloudDevelopersDay";
 
 const theme = createTheme({
   status: {
@@ -45,7 +44,6 @@ function App() {
         <IntellyticsHeader/>
         <IntellyticsContainer/>
         <IntellyticsFooter/>
-        <CloudDevelopersDay/>
       </Box>
     </ThemeProvider>
   );

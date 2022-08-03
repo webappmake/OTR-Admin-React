@@ -20,7 +20,7 @@
   z-index: 999;
   .cloud-developers-day-header {
     @include flex;
-    width: 100%;    
+    width: 100%;
     height: $header-height; 
     justify-content: space-between;    
   }

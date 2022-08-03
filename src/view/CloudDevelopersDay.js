@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import '../assets/scss/CloudDevelopersDay.scss';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -26,7 +26,15 @@ const theme = createTheme({
   },  
 });
 
-function App() {
+
+function CloudDevelopersDay() {
+
+  useEffect(() => {
+    let vh = 0;
+    vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", '${vh}px');
+  }, [window.innerHeight] );
+  
   return (
     <ThemeProvider theme={theme}>
       <Box className='wrapper'>
@@ -37,4 +45,4 @@ function App() {
     </ThemeProvider>
   );
 }
-export default App;
+export default CloudDevelopersDay;
