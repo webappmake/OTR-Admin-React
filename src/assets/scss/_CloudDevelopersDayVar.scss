@@ -34,3 +34,16 @@ $gutter-xxl : 60px;
 
 $radius-sm: 4px;
 $radius-md: 12px;
+/* vw 변환 */
+$header-height: max(11.4583vw, 140px);
+$layout-gutter-left: 10.4167vw;
+
+$gutter-xs: 0.3125vw; 
+$gutter-sm: 0.6250vw;
+$gutter-md: 1.2500vw; 
+$gutter-lg: 1.5625vw; 
+$gutter-xl : 2.0833vw;
+$gutter-xxl : 3.1250vw;  
+
+$radius-sm: 0.2083vw;
+$radius-md: 0.6250vw;
