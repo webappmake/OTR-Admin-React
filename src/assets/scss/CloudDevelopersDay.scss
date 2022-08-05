@@ -24,13 +24,13 @@
   }
   .cloud-developers-day-container {
     width: 100vw;
-    height: calc(100vh - #{$header-height});
+    height: calc(var(--vh, 1vh) * 100 - #{$header_height});
     margin-left: unquote("min(-2.084vw, -18px)");
     overflow: hidden;
     z-index: 997;
     .contents {
       position: relative;
-      height: calc(100vh - #{$header-height} - #{$gutter-xl});
+      height: calc(var(--vh, 1vh) * 100 - #{$header_height} - #{$gutter-xl});
       margin-right: unquote("max(10.4167vw, 146px)");
       background-color: $color-white;
     }
@@ -76,8 +76,7 @@
     }
     .custom-button {
       display: block; 
-      border: 0.1563vw solid $color-title;
-      border-radius: 1.5625vw;
+      border: 0.1563vw solid $color-title; 
       border-radius: unquote("max(1.5625vw, 30px)");
       font-size: unquote("max(0.6771vw, 12px)");
       font-weight: bold;
@@ -100,9 +99,7 @@
       &:hover { text-decoration: underline; }
       &::after {
         content: '';
-        width: 2.8125vw;
         width: unquote("max(2.8125vw, 28px)");
-        height: 0.2604vw;
         height: unquote("max(0.2604vw, 3px)");
         background-color: $color-title;
         display: inline-block;
@@ -359,10 +356,10 @@
       .nav { position: absolute; top: 18px; right: 18px; }
     }
     .cloud-developers-day-container {
-      height: calc(100vh - 200px);
+      height: calc(var(--vh, 1vh) * 100 - 200px);
       .contents {
         width: 100%;
-        height: calc(100vh - 200px - #{$gutter-xl} - 65px);
+        height: calc(var(--vh, 1vh) * 100 - 200px - #{$gutter-xl} - 65px);
         background-color: $color-white;
         .article {
           padding: 18px;
