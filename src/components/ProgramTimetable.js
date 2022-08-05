@@ -6,11 +6,11 @@ export default function ProgramTimetable() {
         <table className='program-timetable' cellPadding={0}>
             <caption>ProgramTimetable</caption>
             <colgroup>
-                <col width="150"/>
-                <col width="70"/>
-                <col width="*"/>
-                <col width="*"/>
-                <col width="*"/>
+                <col width="18%"/>
+                <col width="10%"/>
+                <col width="24%"/>
+                <col width="24%"/>
+                <col width="24%"/>
             </colgroup>
             <thead>
                 <tr>
