@@ -1,13 +1,13 @@
 import * as React from 'react';
-import logoSvg from '../assets/img/intellytics-text-logo.svg';
+import logoSvg from '../assets/img/admin-text-logo.svg';
 import Link from '@mui/material/Link';
 
-export default function IntellyticsHeader() {
+export default function AdminHeader() {
     return (
         <header className='common-header'>
             <h1>
                 <Link href="#" color="inherit" underline="none">
-                    <img className='intellytics-dashboard-logo'src={logoSvg} alt="Intellytics Dashboard"/>
+                    <img className='admin-portal-logo' src={logoSvg} alt="Admin Portal"/>
                 </Link>
             </h1>
             <div className='introduction'>
@@ -19,15 +19,12 @@ export default function IntellyticsHeader() {
                 </p>
             </div>
             <nav className='nav'>
-                <Link className='user-info' href="#" color="inherit" underline="none">
+                {/* <Link className='user-info' href="#" color="inherit" underline="none">
                     <span>hyunjung.ryu</span>
                     <span>dxt-scv</span>
-                </Link>
-                <ul className='link-list'>
-                    <li><Link href="#" color="inherit" underline="none">Admin Site</Link></li>
-                    <li><Link href="#" color="inherit" underline="none">Newsletter</Link></li>
-                    <li><Link href="#" color="inherit" underline="none">FAQ</Link></li>
-                    <li><Link href="#" color="inherit" underline="none">Q&amp;A</Link></li>
+                </Link> */}                
+                <ul className='link-list only'> {/* .user-info를 사용하지 않을 경우, .link-list에 .only를 이중클래스로 사용 */}
+                    <li><Link href="https://intellytics-dashboard.lge.com" color="inherit" underline="none">intellytics Portal</Link></li>
                 </ul>
             </nav>
         </header>

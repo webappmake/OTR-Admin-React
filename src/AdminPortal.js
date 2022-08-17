@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import './assets/scss/AdminPortal.scss';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import IntellyticsHeader from "./components/IntellyticsHeader";
-import IntellyticsContainer from "./components/IntellyticsContainer";
-import IntellyticsFooter from "./components/IntellyticsFooter";
+import AdminHeader from "./components/AdminHeader";
+import AdminContainer from "./components/AdminContainer";
+import AdminFooter from "./components/AdminFooter";
 
 const theme = createTheme({
   status: {
@@ -47,10 +47,10 @@ function AdminPortal() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box className='wrapper'>
-        <IntellyticsHeader/>
-        <IntellyticsContainer/>
-        <IntellyticsFooter/>
+      <Box className='wrapper admin-portal'>
+        <AdminHeader/>
+        <AdminContainer/>
+        <AdminFooter/>
       </Box>
     </ThemeProvider>
   );

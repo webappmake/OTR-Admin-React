@@ -47,7 +47,7 @@ function IntellyticsDashboard() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box className='wrapper'>
+      <Box className='wrapper intellytics-dashboard'>
         <IntellyticsHeader/>
         <IntellyticsContainer/>
         <IntellyticsFooter/>

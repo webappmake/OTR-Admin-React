@@ -9,7 +9,7 @@ import {
     Chip
 } from '@mui/material';
 
-export default function Authorized() {     
+export default function AdminAuthorized() {     
     return (
         <div className='contents'>
             <PerfectScrollbar className='vertical-scroll-area'>
@@ -17,8 +17,8 @@ export default function Authorized() {
                     <Card>
                         <CardActionArea>                            
                             <CardContent>
-                                <h3 className='card-tit'>ThinQ 통합대시보드</h3>
-                                <p className='card-desc'>ThinQ Cloud, App, Service 지표를 확인하실 수 있습니다.</p>
+                                <h3 className='card-tit'>Android App Admin</h3>
+                                <p className='card-desc'>Android OS 기반 App 관리</p>
                                 <div className='chip-wrap'>
                                     <Chip label="Accepted" size="small" color="accepted" disabled={true}/>
                                 </div>
@@ -28,8 +28,8 @@ export default function Authorized() {
                     <Card>
                         <CardActionArea>
                             <CardContent>
-                                <h3 className='card-tit'>H&amp;A 데이터 대시보드</h3>
-                                <p className='card-desc'>H&amp;A 사업본부의 제품 및 서비스 지표를 확인할 수 있습니다. 소속을 명확히 기입해 주세요.</p>
+                                <h3 className='card-tit'>3rd Party App Admin</h3>
+                                <p className='card-desc'>3rd Party App 관리</p>
                                 <div className='chip-wrap'>
                                     <Chip label="Accepted" size="small" color="accepted"/>
                                 </div>
@@ -39,8 +39,8 @@ export default function Authorized() {
                     <Card>
                         <CardActionArea>
                             <CardContent>
-                                <h3 className='card-tit'>ThinQ Cloud 2.0</h3>
-                                <p className='card-desc'>ThinQ 2.0 관련된 기기 등록 및 접속, 사용자, 생산정보, 루틴 관련된 지표를 볼 수 있습니다. 권한요청시 필요하신 지표항목을 명시해주세요.</p>
+                                <h3 className='card-tit'>LUPA Admin</h3>
+                                <p className='card-desc'></p>
                                 <div className='chip-wrap'>
                                     <Chip label="Accepted" size="small" color="accepted"/>
                                 </div>
@@ -50,8 +50,8 @@ export default function Authorized() {
                     <Card>
                         <CardActionArea>
                             <CardContent>
-                                <h3 className='card-tit'>TAS:ThinQ App Server</h3>
-                                <p className='card-desc'>TAS가 관리하는 전반의 데이터에 대한 지표입니다.</p>
+                                <h3 className='card-tit'>TAS Admin</h3>
+                                <p className='card-desc'></p>
                                 <div className='chip-wrap'>
                                     <Chip label="Accepted" size="small" color="accepted"/>
                                     <Chip label="Test" size="small" color="test"/>

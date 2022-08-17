@@ -13,7 +13,7 @@ const names = [
     '한국어'
 ];
 
-export default function IntellyticsFooter() {
+export default function AdminFooter() {
     const [language, setLanguage] = React.useState([]);  
     const handleChange = (event) => {
       const {
@@ -32,7 +32,7 @@ export default function IntellyticsFooter() {
             <section className='footer-info'>
                 <p className='contact'>
                     <em>CONTACT US</em>
-                    <span>plada-admin-op@lge.com</span>
+                    <span>admin-portal@lge.com</span>
                 </p>
                 <FormControl sx={{ m: 0, width: 140 }} size="small">
                     <InputLabel id="language">Language</InputLabel>

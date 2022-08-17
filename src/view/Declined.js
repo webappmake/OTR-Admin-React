@@ -1,14 +1,26 @@
 import * as React from 'react';
 import 'react-perfect-scrollbar/dist/css/styles.css';
 import PerfectScrollbar from 'react-perfect-scrollbar';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Chip from '@mui/material/Chip';
-import Box from '@mui/material/Box';
-import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
+import RequestDialog from '../components/RequestDialog'
+import { 
+    Box,
+    Card, 
+    CardContent,
+    Chip,
+    Fab
+} from '@mui/material';
+
 export default function Declined() { 
-    
+    const [open, setOpen] = React.useState(false);
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
 
     return (
         <div className='contents'>
@@ -19,7 +31,7 @@ export default function Declined() {
                             <h3 className='card-tit'>ThinQ &amp; Amazon DRS</h3>
                             <p className='card-desc'> ThinQ and Amazon DRS(Dash Replenishment Service) 관련 지표를 확인할 수 있는 대시보드입니다.</p>
                         </CardContent>
-                        <Fab variant="extended" color="secondary" size="medium">
+                        <Fab variant="extended" color="secondary" size="medium" onClick={handleClickOpen}>
                             <AddIcon sx={{ mr: 1 }} />
                             <span>Re-request</span>
                         </Fab> 
@@ -32,7 +44,7 @@ export default function Declined() {
                                 <Chip label="Test" size="small" color="test"/>
                             </div>
                         </CardContent>
-                        <Fab variant="extended" color="secondary" size="medium">
+                        <Fab variant="extended" color="secondary" size="medium" onClick={handleClickOpen}>
                             <AddIcon sx={{ mr: 1 }} />
                             <span>Re-request</span>
                         </Fab> 
@@ -42,13 +54,16 @@ export default function Declined() {
                             <h3 className='card-tit'>LG DataHub</h3>
                             <p className='card-desc'>3DataHub 관련 지표를 보여주는 대시보드입니다.</p>
                         </CardContent>
-                        <Fab variant="extended" color="secondary" size="medium">
+                        <Fab variant="extended" color="secondary" size="medium" onClick={handleClickOpen}>
                             <AddIcon sx={{ mr: 1 }} />
                             <span>Re-request</span>
                         </Fab> 
                     </Card>
                 </Box>            
-            </PerfectScrollbar>       
+            </PerfectScrollbar>
+
+            {/* Dialog */}
+            <RequestDialog open={open} onClose={handleClose}/>  
         </div>
     );
 }

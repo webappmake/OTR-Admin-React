@@ -1,10 +1,9 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { Tab, Tabs, Box } from '@mui/material';
-import Authorized from '../view/Authorized';
+import AdminAuthorized from '../view/AdminAuthorized';
 import Unauthorized from '../view/Unauthorized';
 import Declined from '../view/Declined';
-
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -37,7 +36,7 @@ function a11yProps(index) {
     };
 }
 
-export default function IntellyticsContainer() {
+export default function AdminContainer() {
     const [value, setValue] = React.useState(0);
 
     const handleChange = (event, newValue) => {
@@ -54,7 +53,7 @@ export default function IntellyticsContainer() {
                 </Tabs>
             </Box>
             <TabPanel className='common-tab-panel' value={value} index={0}>
-                <Authorized />
+                <AdminAuthorized />
             </TabPanel>
             <TabPanel className='common-tab-panel' value={value} index={1}>
                 <Unauthorized />
