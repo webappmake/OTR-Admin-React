@@ -1,0 +1,169 @@
+@charset "utf-8";
+
+@import "common";
+
+/* Container > Tabs */
+.intellytics-container { 
+  .intellytics-tabs {
+    height: $tab-item-height;
+    margin-left: $layout-gutter-left;
+    * { 
+      letter-spacing: .1rem; 
+      font-size: max(0.8854vw, 14px);
+      font-weight: 600;
+    }
+    .MuiTabs-indicator { height: max(0.2083vw, 4px); }
+  }
+  .MuiBox-root { border: none; padding: 0; }
+  .intellytics-tab-panel {
+    position: relative; 
+    width: calc(100vw - #{$layout-gutter-right});
+    height: calc(100% - #{$tab-item-height});
+    background-color: $color-white;
+    .contents {
+      height: calc(var(--vh, 1vh)*100 - #{$header-height} - #{$tab-item-height} - max(#{$gutter-xl}, 18px));
+      .vertical-scroll-area {        
+        padding-top: max(#{$gutter-sm}, 6px); 
+        padding-left: calc(#{$layout-gutter-left} - #{$gutter-sm});
+      }      
+    }
+  }
+}
+
+/* Container > Card */
+.card-wrap {
+  @include flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 0 -max(#{$gutter-sm}, 6px); 
+  // common & Authorized 
+  .MuiCard-root {    
+    position: relative;
+    width: max(17.9688vw, 300px);
+    min-height: max(7.8125vw, 150px);
+    height: auto;
+    margin: max(#{$gutter-sm}, 6px);
+    
+    .MuiCardContent-root { 
+      padding: max(0.8333vw, 16px); //mui 
+      .card-tit {
+        font-size: max(0.8854vw, 17px);
+        font-weight: 600;
+        line-height: max(1.4583vw, 28px);
+        margin-bottom: max(#{$gutter-sm}, 6px); 
+      }
+      .card-desc { 
+        @include ellipsis(2, 1.5);
+        font-size: max(0.7292vw, 14px);
+        color: $color-description;
+        margin-bottom: max(#{$gutter-sm}, 6px); 
+      }
+      .chip-wrap {
+        margin: - calc($gutter-xs/2);
+        .MuiChip-sizeSmall {
+          font-size: max(0.5729vw, 11px);
+          line-height: 1;
+          padding: 0 max(#{$gutter-xs}, 3px);
+          margin: calc($gutter-xs/2);
+          &.Mui-disabled { opacity: 0 !important; }
+        }
+      }
+    }    
+  }
+  // Unauthorised
+  &.unauthorized {
+    .MuiCard-root {
+      overflow: visible !important;
+      .MuiFab-root {
+        position: absolute; bottom: -20px; left: calc(50% - 28px);
+        width: max(2.9167vw, 56px); //mui
+        height: max(2.9167vw, 56px); //mui
+        min-height: unset;
+        .MuiSvgIcon-root { 
+          width: max(1.2500vw, 24px); //mui
+          height: max(1.2500vw, 24px); //mui
+        }
+      }
+    }  
+  }
+  // Declined
+  &.declined {
+    .MuiCard-root {     
+      overflow: visible !important;
+      .MuiFab-root { 
+        position: absolute; bottom: -20px; left: calc(50% - 69px);
+        span { line-height: 1; font-size: max(0.6250vw, 12px); }
+      }
+    }  
+  }
+}
+
+/* Dialog */
+.intellytics-dialog {  
+  .MuiDialogTitle-root {
+    & > span { display: inline-block; vertical-align: middle; }
+    .MuiChip-sizeSmall {
+      font-size: max(0.6250vw, 12px);
+      font-weight: 600;
+      line-height: 1;
+      margin-left: max(#{$gutter-xs}, 3px);
+    } 
+  }
+  .MuiDialogContent-root {    
+    .MuiDialogContentText-root {
+      color: $color-darkgray;
+      font-size: max(0.6771vw, 13px);
+      line-height: 1.6;
+      letter-spacing: -.01rem;      
+      margin: max(#{$gutter-sm}, 6px) 0;
+      em {                 
+        display: block;
+        font-style: normal;
+        font-size: max(0.7292vw, 14px);
+        font-weight: 600;
+      } 
+      & > .text-mark {
+        display: block;
+        color: $color-mark;       
+        font-weight: 600;
+        margin: max(#{$gutter-sm}, 6px) 0;        
+      }        
+    }
+    .MuiInput-input { font-size: max(0.6771vw, 13px); }
+    .MuiFormControlLabel-label { 
+      font-size: max(0.6250vw, 12px);
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: -.01rem;  
+      color: $color-darkgray;
+    }     
+  }
+  .MuiDialogActions-root {
+    padding: 0 $gutter-md $gutter-md;
+    Button { flex-grow: 1; }
+  }
+}
+
+@media (max-width: 1100px) {
+  .intellytics-header {
+    .introduction {
+      br { 
+        display: none; 
+      }
+    }
+  }  
+}
+
+@media (max-width: 980px) {
+  .copy { display: none; }
+  .intellytics-header {
+    .introduction {
+      .tit { 
+        font-size: max(0.8854vw, 12px);
+        font-weight: 400;
+        letter-spacing: .01rem;
+      }
+      .desc { display: none; }
+    }
+  }  
+}

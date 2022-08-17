@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import CloudDevelopersDay from './view/CloudDevelopersDay';
+import IntellyticsDashboard from './IntellyticsDashboard';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <CloudDevelopersDay/>
+    <IntellyticsDashboard/>
   </React.StrictMode>
 );

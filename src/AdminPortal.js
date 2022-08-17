@@ -25,7 +25,7 @@ const theme = createTheme({
   },  
 });
 
-function CloudDevelopersDay() {
+function AdminPortal() {
 
   useEffect(() => {
     let vh = 0;
@@ -41,4 +41,4 @@ function CloudDevelopersDay() {
     </ThemeProvider>
   );
 }
-export default CloudDevelopersDay;
+export default AdminPortal;

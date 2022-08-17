@@ -1,5 +1,5 @@
 import React from "react";
-import './assets/scss/portal.scss';
+import './assets/scss/IntellyticsDashboard.scss';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import IntellyticsHeader from "./components/IntellyticsHeader";
@@ -12,7 +12,7 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: '#333333', //#5D5FEF',
+      main: '#333333',
       contrastText: '#ffffff',
     },
     secondary: {
@@ -37,7 +37,7 @@ const theme = createTheme({
   },  
 });
 
-function App() {
+function IntellyticsDashboard() {
   return (
     <ThemeProvider theme={theme}>
       <Box className='wrapper'>
@@ -48,4 +48,4 @@ function App() {
     </ThemeProvider>
   );
 }
-export default App;
+export default IntellyticsDashboard;

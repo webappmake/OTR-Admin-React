@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+@import "var", "reset", "mixins";
+@import url("http://fonts.googleapis.com/earlyaccess/notosanskr.css");
+@import '@fontsource/roboto/300.css';
+@import '@fontsource/roboto/400.css';
+@import '@fontsource/roboto/500.css';
+@import '@fontsource/roboto/700.css';
+
+/* Common > Layout */
+.wrapper {
+  width: 100vw;
+  height: calc(var(--vh, 1vh)*100);
+  background-color: $primary;
+  position: relative;
+  padding: max(#{$gutter-xl}, 18px);
+  z-index: 999;
+  .intellytics-header {
+    @include flex;
+    width: 100%;    
+    height: $header-height; 
+    justify-content: space-between;    
+  }
+  .intellytics-container {
+    width: 100vw;
+    height: calc(var(--vh, 1vh)*100 - #{$header_height} - max(#{$gutter-xl}, 18px));
+    margin-left: min(-2.084vw, -18px);
+    overflow: hidden;
+    padding: 0 10.9375vw 0 0; 
+    z-index: 997; 
+  }
+}
+
+/* Header */
+.intellytics-header {
+  & > h1 {
+    img {
+      width: auto;
+      height: max(4.0104vw, 50px);
+      padding: max(#{$gutter-xs}, 3px);
+    }
+  }
+  .introduction {
+    text-transform: uppercase;
+    margin: 0 max(#{$gutter-xl}, 18px);    
+    .tit { 
+      font-size: max(0.8854vw, 15px);
+      font-weight: 600;
+      letter-spacing: .1rem;
+      margin-bottom: $gutter-sm;
+    }
+    .desc {
+      color: $color-darkgray;
+      font-size: max(0.6771vw, 11px);
+      font-weight: 300;
+      line-height: 1.7;
+    }
+  }
+  .nav {
+    @include flex;
+    flex-direction: column;
+    align-items: end;
+    .user-info {
+      text-align: right;
+      margin-bottom: $gutter-lg;
+      &:hover { text-decoration: underline; }
+      &::after {
+        content: '';
+        width: max(2.8125vw, 28px);
+        height: max(0.2604vw, 3px);
+        background-color: $color-title;
+        display: inline-block;
+      }
+      span { 
+        display: block;
+        font-size: unquote("max(0.8333vw, 12px)");
+      }
+    }
+    .link-list {
+      text-align: right;
+      font-size: max(0.7813vw, 13px);
+      font-weight: 600;
+      line-height: 1.7;
+      letter-spacing: .1rem;
+      text-transform: uppercase;
+      a:hover { text-decoration: underline; }
+    } 
+  }
+}
+
+/* Footer */
+.intellytics-footer {
+  .footer-logo {
+    position: absolute; bottom: max(#{$gutter-xl}, 18px); left: max(#{$gutter-xl}, 18px);
+    img { 
+      width: max(2.0833vw, 24px);
+      height: auto;
+    }
+  }
+  .footer-info {
+    position: absolute; bottom: max(#{$gutter-xl}, 18px); right: max(#{$gutter-xl}, 18px);   
+    .contact {   
+      color: $color-darkgray;
+      line-height: 2; 
+      text-align: right;
+      padding-bottom: max(#{$gutter-sm}, 6px);
+      em { 
+        display: block;
+        font-style: normal;
+        font-size: max(0.6771vw, 12px);
+        font-weight: 600;
+        letter-spacing: .05rem;
+      }
+      span {
+        display: block;
+        font-size: max(0.6250vw, 12px);
+        font-weight: 400;
+      }
+    }
+    .MuiInputLabel-root, .MuiSelect-select {
+      font-size: max(0.6771vw, 12px);
+      line-height: initial;
+    }
+  }
+  & > .copy {
+    position: fixed;
+    top: 480px;
+    left: -75px;    
+    transform: rotate(-90deg);
+    font-size: max(0.5208vw, 10px);
+    color: $color-gray;
+  }
+}
