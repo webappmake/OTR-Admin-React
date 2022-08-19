@@ -2,7 +2,7 @@ import * as React from 'react';
 import 'react-perfect-scrollbar/dist/css/styles.css';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import AddIcon from '@mui/icons-material/Add';
-import RequestDialog from '../components/RequestDialog'
+import ReRequestDialog from '../components/ReRequestDialog'
 import { 
     Box,
     Card, 
@@ -63,7 +63,7 @@ export default function Declined() {
             </PerfectScrollbar>
 
             {/* Dialog */}
-            <RequestDialog open={open} onClose={handleClose}/>  
+            <ReRequestDialog open={open} onClose={handleClose}/>  
         </div>
     );
 }

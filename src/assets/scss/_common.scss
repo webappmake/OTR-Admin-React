@@ -287,7 +287,18 @@
       line-height: 1;
       letter-spacing: -.01rem;  
       color: $color-darkgray;
-    }     
+    }
+    .MuiAlert-root { 
+      margin-top: max($gutter-sm, 6px); 
+      .comment {
+        display: block; 
+        font-weight: 600;
+        &.admin { 
+          font-weight: 400;
+          margin-top: max($gutter-xs, 3px); 
+        }
+      }
+    } 
   }
   .MuiDialogActions-root {
     padding: 0 $gutter-md $gutter-md;

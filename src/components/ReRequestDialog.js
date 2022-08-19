@@ -9,11 +9,12 @@ import {
   DialogTitle, 
   FormControlLabel, 
   Checkbox,
+  Alert 
 } from '@mui/material';
 
 const siteName = [ 'SiteName' ];
 
-export default function RequestDialog(props) { 
+export default function ReRequestDialog(props) { 
   const { onClose, open } = props;
 
   const handleClose = () => {
@@ -23,7 +24,7 @@ export default function RequestDialog(props) {
   return (
     <Dialog open={open} onClose={handleClose} className='common-dialog'>
         <DialogTitle>
-            <span>{siteName} 대시보드 사용 요청 (신규)</span>
+            <span>{siteName} 대시보드 사용 요청 (거절됨)</span>
         </DialogTitle>
         <DialogContent>
             <DialogContentText>
@@ -69,11 +70,15 @@ export default function RequestDialog(props) {
                 label="목적"
                 multiline
                 rows={4}
-                helperText="대시보드 사용 목적을 적어주세요."
+                defaultValue="DXT 센터 서비스 플랫폼 담당 클라우드 플랫폼 TP, PLADA 개발"
                 variant="standard"
                 margin="dense"
                 size="small"
             />
+            <Alert severity="error">
+                <span className='comment'>해당 사이트 관리자에 의해 거절되었습니다. 재요청이 필요한 경우, 이름, 소속, 목적을 수정하여 재요청 부탁드립니다.</span>                
+                <span className='comment admin'>테스트 목적으로 Reject 합니다.</span>
+            </Alert>
             <FormControlLabel 
                 control={<Checkbox color="secondaryDark"/>} 
                 label="사전 서면 승낙 없이 제3자에게 데이터를 공개, 누설, 제공하지 않겠습니다." 
@@ -81,7 +86,7 @@ export default function RequestDialog(props) {
         </DialogContent>
         <DialogActions>
             <Button onClick={handleClose} color="gray" variant="contained">취소</Button>
-            <Button onClick={handleClose} color="secondary" variant="contained">전송</Button>
+            <Button onClick={handleClose} color="secondary" variant="contained">재요청</Button>
         </DialogActions>
     </Dialog>
   );
