@@ -1,7 +1,7 @@
 /* ------------------------------------------------------- FONT ------------------------------------------------------- */
 $base_font_family:  "Roboto", "Noto Sans KR", sans-serif !important;
 /* ------------------------------------------------------- COLOR ------------------------------------------------------- */
-$primary: #5D5FEF;
+$primary: #ffe228;
 $primary-light: #7879F1;
 $primary-dark: #4A45BD;
 $bg_actived_dark: #A5A5E3;
@@ -23,6 +23,16 @@ $gutter-xl : 40px;
 $gutter-xxl : 60px;
 $radius-sm: 4px;
 $radius-md: 12px;
-
-$header-height: 64px;
-$breadcrumbs-height: 68px;
+/* vw 변환 */
+$header-height: max(10.4167vw, 150px);
+$tab-item-height: max(2.5vw, 48px); 
+$layout-gutter-left: max(6.2500vw, 120px);
+$layout-gutter-right: max(10.4167vw, 180px);
+$gutter-xs: 0.3125vw; 
+$gutter-sm: 0.6250vw;
+$gutter-md: 1.2500vw; 
+$gutter-lg: 1.5625vw; 
+$gutter-xl : 2.0833vw;
+$gutter-xxl : 3.1250vw;
+$radius-sm: 0.2083vw;
+$radius-md: 0.6250vw;

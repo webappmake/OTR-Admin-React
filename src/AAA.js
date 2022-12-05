@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
-import './assets/scss_Portal/IntellyticsDashboard.scss';
+import './assets/scss/AAA.scss';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import IntellyticsHeader from "./components/IntellyticsHeader";
-import IntellyticsContainer from "./components/IntellyticsContainer";
-import IntellyticsFooter from "./components/IntellyticsFooter";
+import {
+  Box, 
+  Toolbar
+} from '@mui/material';
+import AAAHeader from "./components/AAAHeader";
+import AAAContainerFluid from "./components/AAAContainerFluid";
 
 const theme = createTheme({
   status: {
@@ -12,11 +14,11 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: '#333333',
+      main: '#5D5FEF',
       contrastText: '#ffffff',
     },
     secondary: {
-      main: '#ffe228',
+      main: '#7879F1',
       contrastText: '#333333',
     },
     secondaryDark: {
@@ -37,7 +39,7 @@ const theme = createTheme({
   },  
 });
 
-function IntellyticsDashboard() {
+function AAA() {
 
   useEffect(() => {
     let vh = 0;
@@ -47,12 +49,12 @@ function IntellyticsDashboard() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box className='wrapper intellytics-dashboard'>
-        <IntellyticsHeader/>
-        <IntellyticsContainer/>
-        <IntellyticsFooter/>
+      <Box className='AAA-common-layout'>
+        <AAAHeader/>
+        <Toolbar />
+        <AAAContainerFluid/>
       </Box>
     </ThemeProvider>
   );
 }
-export default IntellyticsDashboard;
+export default AAA;

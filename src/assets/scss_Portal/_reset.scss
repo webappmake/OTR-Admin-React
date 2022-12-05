@@ -22,7 +22,7 @@ body {
 	word-break: keep-all;
 	-ms-word-break: keep-all;
 }
-* { box-sizing: border-box !important; }
+* { box-sizing: border-box; }
 h1, h2, h3, h4, h5, h6 { 
 	font-family: $base_font_family;
 	margin: 0; 

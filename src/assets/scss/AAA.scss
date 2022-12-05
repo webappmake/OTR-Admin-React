@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+@import "var", "reset", "mixins";
+
+.vertical-scroll-area {
+}
+
+
+
+.AAA-common-layout {   
+    width: 100vw;
+    height: 100vh;
+    .AAA-header { height: $header-height; }
+    .AAA-container-fluid {
+        height: calc(100vh - #{$header-height});
+        @include flex;
+        .AAA-sidebar {
+            .cu-sub-header {
+                color: $primary-light;
+                background: none;
+                line-height: 2; 
+                font-weight: 500; 
+            }
+            .cu-divider { background-color: $primary-light; }
+        }
+        .AAA-container {       
+            .AAA-breadcrumbs-wrap {
+                @include flex;
+                // height: $breadcrumbs-height;
+                justify-content: space-between;
+                padding: $gutter-md $gutter-md $gutter-xs;                
+                .AAA-breadcrumbs { line-height: 38px; }
+            }
+            .AAA-contents-wrap {  
+                height: calc(100vh - #{$header-height} - #{$breadcrumbs-height});
+                .AAA-contents {
+                    padding: $gutter-md;  
+                }
+            }
+        }
+    }
+}
+
+
+
