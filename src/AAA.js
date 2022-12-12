@@ -1,10 +1,7 @@
-import React, { useEffect } from "react";
+import * as React from 'react';
 import './assets/scss/AAA.scss';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import {
-  Box, 
-  Toolbar
-} from '@mui/material';
+import { Box } from '@mui/material';
 import AAAHeader from "./components/AAAHeader";
 import AAAContainerFluid from "./components/AAAContainerFluid";
 
@@ -12,25 +9,22 @@ const theme = createTheme({
   status: {
     danger: '#D00202',
   },
+  // color 공유된 것이 없어서 Figma 기준으로 설정함
   palette: {
-    primary: {
+    primary: { // = _var.scss/$primary
       main: '#5D5FEF',
       contrastText: '#ffffff',
     },
-    secondary: {
+    secondary: { // = _var.scss/$secondary
       main: '#7879F1',
       contrastText: '#333333',
     },
-    secondaryDark: {
-      main: '#f9b200',
+    secondaryDark: { // = _var.scss/$secondary-dark
+      main: '#4A45BD',
       contrastText: '#ffffff',
     },
     accepted: {
       main: '#4d4ddb',
-      contrastText: '#ffffff',
-    },
-    test: {
-      main: '#f16c35',
       contrastText: '#ffffff',
     },
     gray: {
@@ -39,22 +33,14 @@ const theme = createTheme({
   },  
 });
 
-function AAA() {
-
-  useEffect(() => {
-    let vh = 0;
-    vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty("--vh", `${vh}px`);
-  }, [window.innerHeight]);
-
+function AAASample() {
   return (
     <ThemeProvider theme={theme}>
       <Box className='AAA-common-layout'>
         <AAAHeader/>
-        <Toolbar />
         <AAAContainerFluid/>
       </Box>
     </ThemeProvider>
   );
 }
-export default AAA;
+export default AAASample;

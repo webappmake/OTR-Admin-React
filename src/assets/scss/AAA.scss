@@ -1,45 +1,51 @@
 @charset "utf-8";
-
 @import "var", "reset", "mixins";
 
-.vertical-scroll-area {
-}
-
-
-
+/* Android App Admin는 모든 요소가 고정 단위(px)을 사용하며 일정 사이즈(1280px) 이하 일 때 가로 스크롤이 발생합니다. */
 .AAA-common-layout {   
+    position: fixed; top: 0; left: 0; // mui toolbar 여백으로 인해 고정
     width: 100vw;
     height: 100vh;
-    .AAA-header { height: $header-height; }
+    .AAA-header { 
+        height: $header-height; 
+        justify-content: center;
+    }
     .AAA-container-fluid {
-        height: calc(100vh - #{$header-height});
         @include flex;
-        .AAA-sidebar {
-            .cu-sub-header {
-                color: $primary-light;
-                background: none;
-                line-height: 2; 
-                font-weight: 500; 
+        margin-top: $header-height;        
+        height: calc(100vh - #{$header-height});
+        .AAA-sidebar-wrap {
+            & > .MuiPaper-root { padding-top: $header-height; }
+            .AAA-sidebar {
+                .cu-sub-header {
+                    color: $secondary;
+                    background: none;
+                    line-height: 2; 
+                    font-weight: 500; 
+                }
+                .cu-divider { background-color: $secondary; }
             }
-            .cu-divider { background-color: $primary-light; }
         }
-        .AAA-container {       
-            .AAA-breadcrumbs-wrap {
-                @include flex;
-                // height: $breadcrumbs-height;
-                justify-content: space-between;
-                padding: $gutter-md $gutter-md $gutter-xs;                
-                .AAA-breadcrumbs { line-height: 38px; }
-            }
-            .AAA-contents-wrap {  
-                height: calc(100vh - #{$header-height} - #{$breadcrumbs-height});
-                .AAA-contents {
-                    padding: $gutter-md;  
+        .AAA-container-wrap {
+            position: relative;
+            .AAA-container {            
+                min-width: 1040px; //가로 스크롤 기준이 1280px이므로 1280px - 240px(Sidebar) 으로 계산함 
+                height: calc(100vh - #{$header-height});
+                overflow: hidden;
+                .AAA-breadcrumbs-wrap {
+                    @include flex;
+                    width: 100%;
+                    height: $breadcrumbs-height;
+                    justify-content: space-between;
+                    padding: $gutter-md $gutter-md $gutter-xs;                
+                    .AAA-breadcrumbs { line-height: 38px; }
+                }
+                .AAA-contents-wrap { 
+                    width: 100%;
+                    height: calc(100% - #{$breadcrumbs-height});
+                    .AAA-contents { padding: $gutter-md; }
                 }
             }
         }
     }
 }
-
-
-

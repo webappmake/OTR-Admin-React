@@ -2,10 +2,10 @@
 $base_font_family:  "Roboto", "Noto Sans KR", sans-serif !important;
 /* ------------------------------------------------------- COLOR ------------------------------------------------------- */
 $primary: #5D5FEF;
-$primary-light: #7879F1;
-$primary-dark: #4A45BD;
-$bg_actived_dark: #A5A5E3;
-$bg_blank_area: rgba(224, 224, 246, 0.4);
+$secondary: #7879F1;
+$secondary-dark: #4A45BD;
+$bg-actived-dark: #A5A5E3;
+$bg-blank-area: rgba(224, 224, 246, 0.4);
 $border: #e3ebf6;
 $color-white: #ffffff;
 $color-lightgray: #f9fafb;
@@ -26,3 +26,4 @@ $radius-md: 12px;
 
 $header-height: 64px;
 $breadcrumbs-height: 68px;
+$drawer-width: 240px;

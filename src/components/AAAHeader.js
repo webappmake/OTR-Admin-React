@@ -1,13 +1,7 @@
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
+import { AppBar, Toolbar, Typography, Button, IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import CssBaseline from '@mui/material/CssBaseline';
-  
+
 export default function AAAHeader() {
   return (
     <AppBar 
@@ -17,6 +11,7 @@ export default function AAAHeader() {
       sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
     >
       <Toolbar>
+        {/* 항시 노출되는 것으로 기획되었으므로 기능이 없는 하기 아이콘 버튼은 주석처리 하는 것이 좋습니다. */}
         <IconButton
           size="large"
           edge="start"

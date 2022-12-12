@@ -1,12 +1,5 @@
 import * as React from 'react';
-import {
-  Box, 
-  Breadcrumbs,
-  Link,
-  Stack, 
-  Button, 
-  Divider
-} from '@mui/material';
+import { Box, Breadcrumbs, Link, Stack, Button } from '@mui/material';
 
 function handleClick(event) {
   event.preventDefault();
@@ -56,10 +49,10 @@ export default function AAABreadcrumbs() {
         </Link>
       </Breadcrumbs>
       <Stack spacing={1} direction="row">
-        <Button variant="text">Package List</Button>
-        <Button variant="text">Version Code History</Button>
-        <Button variant="outlined">Edit</Button>
-        <Button variant="contained">Save</Button>        
+        <Button variant="text" color='secondary'>Package List</Button>
+        <Button variant="text" color='secondary'>Version Code History</Button>
+        <Button variant="outlined" color='secondary'>Edit</Button>
+        <Button variant="contained" color='secondaryDark'>Save</Button>        
       </Stack>
     </Box>
   );
